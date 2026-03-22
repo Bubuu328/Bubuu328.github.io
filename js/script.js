@@ -350,7 +350,238 @@ function initTrollZone() {
 document.addEventListener("DOMContentLoaded", function () {
   initTrollZone();
   initGalleryLightbox();
+  initGameFeature();
+  initRoastFeature();
+  initCrystalBall();
+  initSweetBtn();
+  initTitleEasterEgg();
+  initFooterEasterEgg();
 });
+
+function initGameFeature() {
+  const gameAnswers = {
+    food: [
+      "I'm pretty sure pizza is a vegetable, right? 🍕",
+      "Fries > any meal... especially yours 😏",
+      "I'd choose food over you... jk, but fries come close 🍟",
+      "My superpower? Stealing your food without you noticing 👻",
+      "Sharing food = true love test. You fail every time 💔😂",
+    ],
+    habit: [
+      "I check on you 47 times a day... okay fine, 48 times 👀",
+      "Stealing your hoodies is not a bad habit, it's a lifestyle 🧥",
+      "I absolutely WILL forget important details but remember random stuff 🧠",
+      "My bad habit is being too perfect... jk obviously not 😅",
+      "I hog the covers like I own the whole bed 🛏️",
+    ],
+    crazy: [
+      "I once researched your favorite movie for 3 hours just to understand you better 🎬",
+      "I talk to myself about you constantly. My brain is obsessed 🤪",
+      "I'd probably do something wild like THIS... a whole website! 🌐",
+      "I'm crazy enough to believe you love me back 💕",
+      "I've definitely googled 'how to be a better partner' at 2 AM 📱",
+    ],
+    love: [
+      "Quality time... but like, you cooking while I steal food 🍳",
+      "Acts of service: Me making food disappear from your plate 🍽️",
+      "Words of affirmation... delivered in my most sarcastic voice 🗣️",
+      "Physical touch: Me clinging to you like I'm going away forever 🤗",
+      "Gift giving: Future gifts for future anniversaries (that haven't happened yet) 🎁",
+    ],
+    superpower: [
+      "Making you smile even when you swear you're mad at me 😊",
+      "Stealing your food and you somehow not noticing... yet 👻",
+      "Loving you more every single day (even though it seems impossible) 💕",
+      "Turning a simple moment into a memory you'll never forget ✨",
+      "Being annoyingly perfect at annoying you 😏",
+    ],
+  };
+
+  document.querySelectorAll(".game-btn").forEach((btn) => {
+    btn.addEventListener("click", function () {
+      const topic = this.dataset.topic;
+      const answers = gameAnswers[topic];
+      const randomAnswer = answers[Math.floor(Math.random() * answers.length)];
+      const answerDiv = document.getElementById("gameAnswer");
+
+      answerDiv.style.animation = "none";
+      setTimeout(() => {
+        answerDiv.textContent = randomAnswer;
+        answerDiv.style.animation = "slideUp 0.4s ease-out";
+      }, 10);
+    });
+  });
+}
+
+function initRoastFeature() {
+  const roastBtn = document.getElementById("roastBtn");
+  const roastInput = document.getElementById("roastInput");
+  const roastResponse = document.getElementById("roastResponse");
+
+  const roastResponses = [
+    "Okay, noted! I'll add that to my 'things you secretly love' list 📝",
+    "WAIT, you SECRETLY love that? I thought you hated me for it! 😭",
+    "Aww, so you DO think my weirdness is cute? I knew it! 😏💕",
+    "This just made my day. Actually, scratch that, my whole YEAR 🥺",
+    "I'm saving this. For arguments. And keeping it forever 📸",
+    "You love my weirdness?? Marry m— oh wait, technically we're married by internet standards now 💍",
+    "Breaking: You admit I'm not THAT annoying. Progress! 🎉",
+    "This is being screenshot and sent to everyone I know 📱",
+    "Okay so we're officially a crazy couple. I can live with that 🤪💕",
+    "Did you just compliment me?? BEEP BOOP ERROR 404 💫",
+  ];
+
+  const emojis = ["🎯", "💕", "✨", "🔥", "😏", "🎉", "💫", "👏", "🌟", "💯"];
+
+  roastBtn.addEventListener("click", function () {
+    if (roastInput.value.trim() || !roastInput.value.trim()) {
+      const response =
+        roastResponses[Math.floor(Math.random() * roastResponses.length)];
+      const emoji = emojis[Math.floor(Math.random() * emojis.length)];
+
+      roastResponse.style.animation = "none";
+      setTimeout(() => {
+        roastResponse.textContent = `${response} ${emoji}`;
+        roastResponse.style.animation = "slideUp 0.4s ease-out";
+      }, 10);
+
+      roastInput.value = "";
+    }
+  });
+
+  roastInput.addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
+      roastBtn.click();
+    }
+  });
+}
+
+function initCrystalBall() {
+  const crystalBall = document.getElementById("crystalBall");
+  const prediction = document.getElementById("prediction");
+
+  const predictions = [
+    "Future prediction: I'll still love you more than fries... and that's saying something 🍟💕",
+    "I see... a lot of 'I love you' texts, failed attempts to leave you on read, and forever ❤️",
+    "Crystal ball says: You'll never get rid of me. Even tried to return me, didn't work 😏",
+    "World domination? Nah. Our future? Dominating life together 👑💫",
+    "The future shows us: Still arguing about fries, still madly in love, still perfect ✨",
+    "Prediction: Every day with you will be better than the last. Plot twist: It's already happening 🌟",
+    "I see wrinkles, gray hair, and still holding hands. Beautiful, really 👵👴💕",
+    "Your future: Stuck with my weirdness forever. RIP your sanity 👻😂",
+    "Actually the crystal ball just shows your face smiling. That's our future right there 😊💕",
+    "Ooh! I see us being actually official now. Wait, we already are. Crystal ball confirmed it 🎉",
+  ];
+
+  crystalBall.addEventListener("click", function () {
+    crystalBall.style.animation = "none";
+    prediction.style.animation = "none";
+
+    setTimeout(() => {
+      const randomPrediction =
+        predictions[Math.floor(Math.random() * predictions.length)];
+      prediction.textContent = randomPrediction;
+      crystalBall.style.animation = "bounce 0.6s ease-out";
+      prediction.style.animation = "slideUp 0.4s ease-out";
+    }, 10);
+  });
+}
+
+function initSweetBtn() {
+  const sweetBtn = document.getElementById("sweetBtn");
+  const sweetMessages = [
+    "I love you too! 💕",
+    "You just made my heart do a flip ✨",
+    "I promise to love you forever (and steal your fries forever) 🍟💕",
+    "You saying something sweet just made my whole year 😭💕",
+    "Aww stop, you're making me blush 🥺❤️",
+    "I love you more! (Let's not fight about it) 💕",
+    "This declaration goes straight to my heart and my weird journal 📖💫",
+  ];
+
+  if (sweetBtn) {
+    sweetBtn.addEventListener("click", function () {
+      const msg =
+        sweetMessages[Math.floor(Math.random() * sweetMessages.length)];
+      setTimeout(() => {
+        alert(`💕 ${msg} 💕`);
+        confetti();
+      }, 300);
+    });
+  }
+}
+
+function initTitleEasterEgg() {
+  const mainTitle = document.getElementById("mainTitle");
+  let clickCount = 0;
+
+  const titleMessages = [
+    "👀 Looking for Easter eggs?",
+    "🎉 You found one!",
+    "💕 I love that you're exploring!",
+    "😏 Keep clicking, there's more!",
+    "🔥 You're a professional clicker!",
+    "⚡ ULTIMATE POWER: CLICKING",
+    "🌟 You're officially part of the secret club",
+    "💪 Clicking strength: MAXED OUT",
+    "🚀 To the moon with our love!",
+    "∞ This could go on forever... like my love for you",
+  ];
+
+  if (mainTitle) {
+    mainTitle.addEventListener("click", function (e) {
+      clickCount++;
+      mainTitle.style.animation = "none";
+      setTimeout(() => {
+        const message =
+          titleMessages[Math.min(clickCount - 1, titleMessages.length - 1)];
+        mainTitle.textContent = message;
+        mainTitle.style.animation = "bounce 0.6s ease-out";
+      }, 10);
+
+      // Extra surprise after 5 clicks
+      if (clickCount === 5) {
+        confetti();
+      }
+
+      // Reset after 3 seconds of no clicking
+      clearTimeout(mainTitle.resetTimeout);
+      mainTitle.resetTimeout = setTimeout(() => {
+        clickCount = 0;
+        mainTitle.textContent = "💕 Happy Anniversary 💕";
+      }, 5000);
+    });
+  }
+}
+
+function initFooterEasterEgg() {
+  const easterFooter = document.getElementById("easterFooter");
+  const footerMsg = document.getElementById("footerMsg");
+
+  const footerSecrets = [
+    "🔐 Secret message: You make my heart go boom boom 💓",
+    "🤫 Shhhh... I think about you way too much",
+    "💌 This whole website is actually just me screaming: I LOVE YOU!",
+    "🎭 Plot twist: Every word here is true despite my trolling",
+    "😏 Okay fine, you caught me being romantic. Don't tell anyone",
+    "🌙 Fun fact: I probably made this at 2 AM thinking about you",
+    "⭐ Here's the real secret: You're literally everything to me",
+    "🔑 The secret ingredient to this website? Pure unfiltered love",
+    "📜 This is basically me confessing my feelings in 500 different ways",
+  ];
+
+  if (easterFooter) {
+    easterFooter.addEventListener("click", function () {
+      const secret =
+        footerSecrets[Math.floor(Math.random() * footerSecrets.length)];
+      footerMsg.textContent = secret;
+      footerMsg.style.animation = "none";
+      setTimeout(() => {
+        footerMsg.style.animation = "slideUp 0.4s ease-out";
+      }, 10);
+    });
+  }
+}
 
 function initGalleryLightbox() {
   // Create lightbox HTML

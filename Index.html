@@ -25,8 +25,18 @@
 
     <div class="container">
       <header>
-        <h1 id="mainTitle">💕 Happy Anniversary 💕</h1>
+        <h1 id="mainTitle" class="easter-egg">💕 Happy Anniversary 💕</h1>
         <p class="subtitle">To the most amazing person I know ❤️</p>
+        <p
+          style="
+            font-size: 0.85rem;
+            color: #ff69b4;
+            margin-top: 10px;
+            cursor: help;
+          "
+        >
+          (Click the title for a surprise 👀)
+        </p>
       </header>
 
       <section>
@@ -184,9 +194,93 @@
       </section>
 
       <section style="text-align: center">
-        <button class="button" onclick="alert('I love you too! 💕')">
+        <button class="button" id="sweetBtn">
           Click Here To Tell Me Something Sweet
         </button>
+      </section>
+
+      <section>
+        <h2>🎮 Couple's Game: How Well Do You Know Me? 🎮</h2>
+        <div
+          style="
+            background: linear-gradient(135deg, #fff5f7 0%, #ffe0eb 100%);
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+          "
+        >
+          <p style="margin-bottom: 20px; color: #666">
+            Pick a random topic and I'll give you a silly answer:
+          </p>
+          <div
+            style="
+              display: flex;
+              gap: 10px;
+              flex-wrap: wrap;
+              justify-content: center;
+            "
+          >
+            <button class="game-btn" data-topic="food">🍕 Food</button>
+            <button class="game-btn" data-topic="habit">😴 Bad Habit</button>
+            <button class="game-btn" data-topic="crazy">🤪 Crazy Thing</button>
+            <button class="game-btn" data-topic="love">💕 Love Language</button>
+            <button class="game-btn" data-topic="superpower">
+              ⚡ Superpower
+            </button>
+          </div>
+          <div
+            id="gameAnswer"
+            style="
+              margin-top: 20px;
+              font-size: 1.1rem;
+              color: #ff1493;
+              font-weight: bold;
+              min-height: 40px;
+            "
+          ></div>
+        </div>
+      </section>
+
+      <section>
+        <h2>🔥 Roast Me Back! 🔥</h2>
+        <div
+          style="
+            background: linear-gradient(135deg, #ffe0d6 0%, #ffd4e5 100%);
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+          "
+        >
+          <p style="margin-bottom: 20px; color: #666">
+            You think I'm bad? Tell me something you secretly love about my
+            weirdness:
+          </p>
+          <input
+            type="text"
+            id="roastInput"
+            placeholder="Type something... (or just mash your keyboard 😏)"
+            style="
+              width: 100%;
+              padding: 12px;
+              border: 2px solid #ff69b4;
+              border-radius: 10px;
+              font-size: 1rem;
+              margin-bottom: 15px;
+            "
+          />
+          <button id="roastBtn" class="button" style="margin: 0 5px">
+            Send Roast 🎤
+          </button>
+          <div
+            id="roastResponse"
+            style="
+              margin-top: 15px;
+              font-size: 1rem;
+              color: #333;
+              min-height: 30px;
+            "
+          ></div>
+        </div>
       </section>
 
       <section>
@@ -406,10 +500,107 @@
         </div>
       </section>
 
+      <section>
+        <h2>🎭 Predictions For Our Future 🎭</h2>
+        <div
+          style="
+            background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%);
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+          "
+        >
+          <p style="margin-bottom: 20px; color: #666">
+            Click the crystal ball to see our future 🔮
+          </p>
+          <button
+            id="crystalBall"
+            class="button"
+            style="font-size: 1.5rem; padding: 20px 30px"
+          >
+            🔮
+          </button>
+          <div
+            id="prediction"
+            style="
+              margin-top: 20px;
+              font-size: 1rem;
+              color: #333;
+              min-height: 50px;
+              font-style: italic;
+            "
+          ></div>
+        </div>
+      </section>
+
+      <section
+        style="background: linear-gradient(135deg, #fff9e6 0%, #fffde7 100%)"
+      >
+        <h2>🚨 DANGER ZONE 🚨</h2>
+        <div style="padding: 25px; border-radius: 10px; text-align: center">
+          <p style="margin-bottom: 20px; color: #666; font-size: 1.1rem">
+            Things you should NEVER do (but you will anyway 😈):
+          </p>
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 15px;
+              text-align: left;
+            "
+          >
+            <div class="danger-card">
+              <p style="font-weight: bold; color: #ff6b9d">
+                ❌ Run out of fries
+              </p>
+              <p style="font-size: 0.9rem; color: #666">
+                Consequences: Becoming free therapy for sadness
+              </p>
+            </div>
+            <div class="danger-card">
+              <p style="font-weight: bold; color: #ff6b9d">
+                ❌ Ignore my messages
+              </p>
+              <p style="font-size: 0.9rem; color: #666">
+                Consequences: Finding you while you sleep to deliver the message
+                personally
+              </p>
+            </div>
+            <div class="danger-card">
+              <p style="font-weight: bold; color: #ff6b9d">
+                ❌ Forget an anniversary date
+              </p>
+              <p style="font-size: 0.9rem; color: #666">
+                Consequences: This website haunting you forever
+              </p>
+            </div>
+            <div class="danger-card">
+              <p style="font-weight: bold; color: #ff6b9d">
+                ❌ Say you're "fine" when you're not
+              </p>
+              <p style="font-size: 0.9rem; color: #666">
+                Consequences: Receiving 47 follow-up questions in rapid fire
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <footer>
-        <p>Made with ❤️ for someone special</p>
+        <p id="footerMsg">Made with ❤️ for someone special</p>
         <p style="font-size: 0.9rem; margin-top: 10px">
           © 2026 Your Love | Powered by ❤️ and excessive amounts of free time
+        </p>
+        <p
+          style="
+            font-size: 0.8rem;
+            margin-top: 15px;
+            color: #ff69b4;
+            cursor: pointer;
+          "
+          id="easterFooter"
+        >
+          👀 Psst... click here for a secret 👀
         </p>
       </footer>
     </div>
