@@ -322,26 +322,408 @@ footer {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+/* Extra Small Devices (Phones < 480px) */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 20px 15px;
+    max-width: 100%;
+  }
+
+  header {
+    margin-bottom: 25px;
+    padding: 15px;
+  }
+
   header h1 {
-    font-size: 2rem;
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
   }
 
   section {
-    padding: 20px;
+    margin-bottom: 30px;
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+
+  .calculator-box {
+    padding: 15px;
+  }
+
+  .calculator-result {
+    font-size: 1rem;
+  }
+
+  .reasons li {
+    padding: 12px;
+    margin: 8px 0;
+    font-size: 0.95rem;
+  }
+
+  .warning-box {
+    padding: 15px;
+  }
+
+  .warning-side-effects li {
+    padding: 8px 0;
+    font-size: 0.95rem;
   }
 
   .gallery {
     grid-template-columns: 1fr;
+    gap: 15px;
+    margin: 15px 0;
+  }
+
+  .gallery img {
+    border: 3px dashed #ff69b4;
+    padding: 5px;
   }
 
   .modal-box {
     padding: 20px;
     margin: 20px;
+    max-width: 90%;
+  }
+
+  .modal-box h2 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+  }
+
+  .modal-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .btn-yes,
+  .btn-no {
+    padding: 12px 25px;
+    font-size: 0.95rem;
+    width: 100%;
+  }
+
+  .modal-footer {
+    font-size: 0.85rem;
+    margin-top: 12px;
   }
 
   .sweet-message {
+    padding: 20px;
     font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .button {
+    padding: 12px 30px;
+    font-size: 0.95rem;
+    width: 90%;
+    max-width: 100%;
+  }
+
+  .game-btn {
+    padding: 10px 16px;
+    font-size: 0.85rem;
+    margin: 5px 2px;
+  }
+
+  .troll-btn {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+
+  .game-buttons-container {
+    gap: 8px;
+  }
+
+  .qa-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .danger-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  input[type="text"] {
+    font-size: 16px; /* Prevents zoom on focus */
+  }
+
+  .danger-card {
+    padding: 12px;
+    margin-bottom: 10px;
+  }
+
+  .danger-card p {
+    font-size: 0.9rem;
+  }
+
+  .lightbox-close {
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+  }
+
+  footer {
+    padding: 20px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Small Devices (Phones 480px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+
+  .container {
+    padding: 30px 20px;
+    max-width: 100%;
+  }
+
+  header {
+    margin-bottom: 35px;
+    padding: 18px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  section {
+    margin-bottom: 35px;
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    margin-bottom: 18px;
+  }
+
+  .calculator-box {
+    padding: 20px;
+  }
+
+  .calculator-result {
+    font-size: 1.1rem;
+  }
+
+  .reasons li {
+    padding: 14px;
+    margin: 9px 0;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .modal-box {
+    padding: 25px;
+    margin: 20px;
+    max-width: 85%;
+  }
+
+  .modal-box h2 {
+    font-size: 1.6rem;
+  }
+
+  .modal-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn-yes,
+  .btn-no {
+    padding: 12px 30px;
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  .sweet-message {
+    padding: 25px;
+    font-size: 1.1rem;
+  }
+
+  .button {
+    padding: 13px 35px;
+    font-size: 1rem;
+    width: 95%;
+  }
+
+  .game-btn {
+    padding: 11px 18px;
+    font-size: 0.9rem;
+    margin: 5px 3px;
+  }
+
+  input[type="text"] {
+    font-size: 16px;
+  }
+
+  .danger-card {
+    padding: 14px;
+  }
+
+  footer {
+    padding: 25px 20px;
+  }
+}
+
+/* Medium Devices (Tablets 769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    padding: 35px 25px;
+    max-width: 100%;
+  }
+
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  section {
+    margin-bottom: 45px;
+    padding: 28px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 22px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+  }
+
+  .modal-box {
+    padding: 35px;
+    max-width: 450px;
+  }
+
+  .modal-buttons {
+    flex-direction: row;
+  }
+
+  .button {
+    padding: 14px 40px;
+    font-size: 1.05rem;
+  }
+
+  .game-btn {
+    padding: 12px 22px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Large Devices (Desktops > 1025px) */
+@media (min-width: 1025px) {
+  .container {
+    padding: 40px 20px;
+    max-width: 1000px;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  section {
+    margin-bottom: 50px;
+    padding: 30px;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+  }
+
+  .button {
+    padding: 15px 40px;
+    font-size: 1rem;
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  /* Increases touch target size for buttons */
+  .btn-yes,
+  .btn-no,
+  .button,
+  .game-btn,
+  .troll-btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Remove hover effects on touch devices */
+  .gallery img:hover {
+    transform: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .button:hover {
+    transform: none;
+    box-shadow: 0 5px 15px rgba(255, 20, 147, 0.4);
+  }
+
+  /* Add active state instead */
+  .btn-yes:active,
+  .btn-no:active,
+  .button:active,
+  .game-btn:active,
+  .troll-btn:active {
+    opacity: 0.8;
+    transform: scale(0.98);
+  }
+
+  .gallery img:active {
+    transform: scale(1.02);
+  }
+}
+
+/* Landscape Orientation Optimization */
+@media (max-height: 600px) and (orientation: landscape) {
+  header {
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+  }
+
+  section {
+    margin-bottom: 25px;
+    padding: 15px;
+  }
+
+  .modal-box {
+    max-height: 90vh;
+    overflow-y: auto;
   }
 }
 
@@ -485,6 +867,30 @@ footer {
   }
 }
 
+/* Game Button Container */
+.game-buttons-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Q&A Grid */
+.qa-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+/* Danger Zone Grid */
+.danger-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 15px;
+  text-align: left;
+}
+
 /* Game Button Styling */
 .game-btn {
   background: linear-gradient(135deg, #ff6b9d, #ff1493);
@@ -556,12 +962,21 @@ footer {
 /* Input Styling */
 input[type="text"] {
   transition: all 0.3s ease !important;
+  width: 100%;
+  padding: 14px 12px;
+  border: 2px solid #ff69b4;
+  border-radius: 10px;
+  font-size: 16px; /* Prevents zoom on iOS */
+  font-family: inherit;
+  box-sizing: border-box;
+  line-height: 1.5;
 }
 
 input[type="text"]:focus {
   outline: none;
   box-shadow: 0 0 15px rgba(255, 20, 147, 0.5) !important;
-  transform: scale(1.02);
+  transform: scale(1.01);
+  border-color: #ff1493;
 }
 
 /* Playful Animations */
