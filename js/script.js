@@ -217,8 +217,7 @@ function trollAlert() {
   const trollMessages = [
     "Wait... did you actually think I made this? My girlfriend did. 😏",
     "Sorry, she's too good for you too, mate 💅",
-    "This website is better than your love life 📱✨",
-    "Plot twist: She made this to break up with you 🎭",
+    "Plot twist: He made this to break up with you 🎭",
     "You know what's worse than this trolling? Accepting fries stolen 🍟😤",
   ];
   return trollMessages[Math.floor(Math.random() * trollMessages.length)];
