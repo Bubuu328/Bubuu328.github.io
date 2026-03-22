@@ -959,14 +959,13 @@ footer {
   z-index: 1;
 }
 
-/* Input Styling */
 input[type="text"] {
   transition: all 0.3s ease !important;
   width: 100%;
   padding: 14px 12px;
   border: 2px solid #ff69b4;
   border-radius: 10px;
-  font-size: 16px; /* Prevents zoom on iOS */
+  font-size: 16px;
   font-family: inherit;
   box-sizing: border-box;
   line-height: 1.5;
@@ -979,7 +978,6 @@ input[type="text"]:focus {
   border-color: #ff1493;
 }
 
-/* Playful Animations */
 header h1 {
   animation: float 3s ease-in-out infinite;
 }

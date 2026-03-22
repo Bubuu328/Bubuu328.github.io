@@ -13,7 +13,6 @@ function initProposal() {
     "Not an option! 🙅",
     "Nice try! 😤",
     "Ohhhh! Ayaw nya talaga ako! 😭",
-    "KEEP TRYING LOL 😹",
     "Good luck! Tulitt mo ahh 🤣",
     "This is painful to watch 💀",
   ];
