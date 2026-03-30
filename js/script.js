@@ -323,7 +323,7 @@ function initTrollZone() {
     "You make me want to be better 💪",
     "I'm not good with words, but I love you a lot",
     "You're my home, not a place 🏠",
-    "I love you even when you steal my food 🍕",
+    "I love you even when you always steal my food 🍕",
     "You're the weirdest person I know... and I love it 😂",
     "You complete me in the corniest way possible ❤️",
     "You're stuck with me forever, sorry not sorry 😏",
@@ -367,7 +367,6 @@ function initGameFeature() {
     ],
     habit: [
       "I check on you 47 times a day... okay fine, 48 times 👀",
-      "Stealing your hoodies is not a bad habit, it's a lifestyle 🧥",
       "I absolutely WILL forget important details but remember random stuff 🧠",
       "My bad habit is being too perfect... jk obviously not 😅",
       "I hog the covers like I own the whole bed 🛏️",
@@ -380,16 +379,16 @@ function initGameFeature() {
       "I've definitely googled 'how to be a better partner' at 2 AM 📱",
     ],
     love: [
-      "Quality time... but like, you cooking while I steal food 🍳",
+      "Quality time... but like, Me cooking while you steal food 🍳",
       "Acts of service: Me making food disappear from your plate 🍽️",
       "Words of affirmation... delivered in my most sarcastic voice 🗣️",
       "Physical touch: Me clinging to you like I'm going away forever 🤗",
-      "Gift giving: Future gifts for future anniversaries (that haven't happened yet) 🎁",
+      "Gift giving: Future gifts for future anniversaries 🎁",
     ],
     superpower: [
       "Making you smile even when you swear you're mad at me 😊",
       "Stealing your food and you somehow not noticing... yet 👻",
-      "Loving you more every single day (even though it seems impossible) 💕",
+      "Loving you more every single day 💕",
       "Turning a simple moment into a memory you'll never forget ✨",
       "Being annoyingly perfect at annoying you 😏",
     ],
@@ -420,7 +419,7 @@ function initRoastFeature() {
     "Okay, noted! I'll add that to my 'things you secretly love' list 📝",
     "WAIT, you SECRETLY love that? I thought you hated me for it! 😭",
     "Aww, so you DO think my weirdness is cute? I knew it! 😏💕",
-    "This just made my day. Actually, scratch that, my whole YEAR 🥺",
+    "This just made my day. Actually, scratch that, my whole LIFE 🥺",
     "I'm saving this. For arguments. And keeping it forever 📸",
     "You love my weirdness?? Marry m— oh wait, technically we're married by internet standards now 💍",
     "Breaking: You admit I'm not THAT annoying. Progress! 🎉",
@@ -459,7 +458,7 @@ function initCrystalBall() {
   const prediction = document.getElementById("prediction");
 
   const predictions = [
-    "Future prediction: I'll still love you more than fries... and that's saying something 🍟💕",
+    "Future prediction: I'll still love you more than Chicken and Fries... and that's saying something 🍟💕",
     "I see... a lot of 'I love you' texts, failed attempts to leave you on read, and forever ❤️",
     "Crystal ball says: You'll never get rid of me. Even tried to return me, didn't work 😏",
     "World domination? Nah. Our future? Dominating life together 👑💫",
@@ -489,8 +488,8 @@ function initSweetBtn() {
   const sweetBtn = document.getElementById("sweetBtn");
   const sweetMessages = [
     "I love you too! 💕",
-    "You just made my heart do a flip ✨",
-    "I promise to love you forever (and steal your fries forever) 🍟💕",
+    "You just made my heart do a backflip ✨",
+    "I promise to love you forever (and not steal your food forever) 🍟💕",
     "You saying something sweet just made my whole year 😭💕",
     "Aww stop, you're making me blush 🥺❤️",
     "I love you more! (Let's not fight about it) 💕",
